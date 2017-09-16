@@ -6,8 +6,18 @@ namespace labThree
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Learn your squares and cubes! Enter an integer:");
-            int input = int.Parse(Console.ReadLine());
+            bool run = true;
+            while (run == true)
+            {
+                Console.WriteLine("Learn your squares and cubes! Enter an integer:");
+                int input = int.Parse(Console.ReadLine());
+
+                for (int i = 0; i <= input; i++)
+                {
+                    Console.WriteLine(i + " " + (i * i) + " " + (i * i * i));
+                }
+                run = Continue();
+            }
 
         }
         public static bool Continue()
