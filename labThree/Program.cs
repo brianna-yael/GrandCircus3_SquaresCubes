@@ -14,7 +14,8 @@ namespace labThree
 
                 for (int i = 0; i <= input; i++)
                 {
-                    Console.WriteLine(i + " " + (i * i) + " " + (i * i * i));
+                    Console.WriteLine(string.Format("{0,-10} {1,-10} {2}", "Number", "Squared", "Cubed"));
+                    Console.WriteLine(string.Format("{0,-10} {1,-10} {2}", i, (i * i), (i * i * i)));
                 }
                 run = Continue();
             }
@@ -36,10 +37,6 @@ namespace labThree
             }
             else
             {
-                //So this is a neat trick call recursion, it involves calling a method inside a method
-                //In a sense it's another way of doing a loop, but using methods 
-                //it works in much the same way, it's divided into two parts: 
-                //a step and an end condition. 
                 Console.WriteLine("I don't understand that, let's try again");
                 goOn = Continue();
             }
